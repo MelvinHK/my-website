@@ -1,7 +1,5 @@
 const canvas = document.getElementById("walk-path");
 const ctx = canvas.getContext('2d');
-canvas.width = 550;
-canvas.height = 90;
 
 const meku = new Image();
 const mekuWidth = 40;
@@ -19,6 +17,8 @@ let frameRate = 24;
 let xPos = 0;
 let direction = 1;
 const leftOffset = 70; // offset meku to account for their shadow
+
+const mekuLink = document.getElementById("meku-link");
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -42,6 +42,8 @@ function draw() {
             direction = -1;
         xPos += direction;
     }
+
+    mekuLink.style.setProperty('left', `calc(50% + ${xPos - 185}px)`);
 
     gameFrame++;
 
