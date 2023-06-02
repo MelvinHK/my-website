@@ -1,7 +1,16 @@
 const canvas = document.getElementById("walk-path");
 const ctx = canvas.getContext('2d');
 
-const meku = new Image();
+const mekuWalkRight = new Image();
+mekuWalkRight.src = "./images/mekuWalkSpriteSheetFlipped.png";
+const mekuWalkLeft = new Image();
+mekuWalkLeft.src = "./images/mekuWalkSpriteSheet.png";
+const mekuIdle = new Image();
+mekuIdle.src = "./images/mekuIdle.png";
+const mekuIdleFlipped = new Image();
+mekuIdleFlipped.src = "./images/mekuIdleFlipped.png";
+
+let currentMeku = new Image();
 const mekuWidth = 40;
 const mekuHeight = 82;
 
@@ -23,13 +32,10 @@ const mekuLink = document.getElementById("meku-link");
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (direction == 1)
-        meku.src = "./images/mekuWalkSpriteSheetFlipped.png";
-    if (direction == -1)
-        meku.src = "./images/mekuWalkSpriteSheet.png";
+    currentMeku = direction == 1 ? mekuWalkRight : direction == -1 ? mekuWalkLeft : currentMeku;
 
     ctx.drawImage(
-        meku,
+        currentMeku,
         direction == 0 ? 0 : spriteFrame * mekuWidth, 0, mekuWidth, mekuHeight, // sprite sheet cropping
         xPos + leftOffset, canvas.height - mekuHeight - 8, mekuWidth, mekuHeight // canvas position
     );
@@ -56,10 +62,7 @@ function draw() {
 function setRandomDirection() {
     const chance = Math.random();
     if (chance < 0.5) {
-        if (direction == 1)
-            meku.src = "./images/mekuIdleFlipped.png";
-        if (direction == -1)
-            meku.src = "./images/mekuIdle.png";
+        currentMeku = direction == 1 ? mekuIdleFlipped : direction == -1 ? mekuIdle : currentMeku;
         direction = 0;
     } else
         direction = chance < 0.75 ? 1 : -1;
