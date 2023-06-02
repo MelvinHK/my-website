@@ -1,7 +1,10 @@
-html,
-body {
+html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #7e80a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 h1 {
@@ -13,6 +16,7 @@ h1 {
 li {
     font-size: 20px;
     list-style-type: none;
+    transition-duration: 0.5s;
 }
 
 #melvin-title {
@@ -27,17 +31,20 @@ li {
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 25vh;
     max-width: 700px;
 }
 
-#main-menu {
-    border-left: 2px solid #65678c;
+#menu-list {
+    border-left: 2px dotted #65678cb9;
     padding-left: 20px;
     margin: 0;
     margin-left: 20px;
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 19px;
+}
+
+#menu-list li:hover {
+    font-size: 25px;
 }
