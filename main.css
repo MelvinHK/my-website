@@ -1,26 +1,8 @@
-#meku-link,
-#walk-path,
-#tree {
-    /* border: 1px solid black; */
-    position: absolute;
-    top: 70%;
-    left: 50%;
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(101, 103, 140);
 }
 
-#meku-link,
-#walk-path {
-    transform: translate(-50%, 65%);
-}
-
-#meku-link {
-    width: 40px;
-    height: 82px;
-}
-
-#tree {
-    background-image: url("./images/treeBg.png");
-    background-size: 800px 400px;
-    transform: translate(-75%, -50%);
-    width: 800px;
-    height: 400px;
+h1 {
+    font-weight: normal;
 }

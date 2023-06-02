@@ -1,0 +1,31 @@
+html {
+    overflow-x: hidden;
+}
+
+#meku-link,
+#walk-path,
+#tree {
+    /* border: 1px solid black; */
+    position: absolute;
+    left: 50%;
+}
+
+#meku-link,
+#walk-path {
+    transform: translateX(-50%);
+    bottom: 50px;
+}
+
+#meku-link {
+    width: 40px;
+    height: 90px;
+}
+
+#tree {
+    background-image: url("./images/treeBg.png");
+    background-size: 800px 400px;
+    transform: translateX(-75%);
+    bottom: 0px;
+    width: 800px;
+    height: 400px;
+}
