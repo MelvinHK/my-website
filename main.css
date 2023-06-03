@@ -37,6 +37,19 @@ a {
     margin: auto;
     padding: 20px;
     max-width: 700px;
+    animation-name: intro;
+    animation-duration: 2s;
+}
+
+@keyframes intro {
+    from {
+        filter: opacity(0);
+        transform: translateY(-50%);
+    }
+    to {
+        filter: opacity(1);
+        transform: translateY(0%);
+    }
 }
 
 #menu-list {

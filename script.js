@@ -59,16 +59,20 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
+const baseInterval = 1750;
+let randomInterval = baseInterval;
+
 function setRandomDirection() {
     const chance = Math.random();
-    if (chance < 0.5) {
+    if (chance < 0.6) {
         currentMeku = direction == 1 ? mekuIdleFlipped : direction == -1 ? mekuIdle : currentMeku;
         direction = 0;
     } else
-        direction = chance < 0.75 ? 1 : -1;
+        direction = chance < 0.8 ? 1 : -1;
+    randomInterval = baseInterval * (1 + chance);
 }
 
-setInterval(setRandomDirection, 2000);
+setInterval(setRandomDirection, randomInterval);
 
 draw();
 
