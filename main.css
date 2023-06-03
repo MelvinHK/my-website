@@ -1,10 +1,6 @@
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #7e80a2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     overflow-x: hidden;
 }
 
@@ -26,18 +22,22 @@ a {
     color: inherit;
 }
 
+#title-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 1s;
+}
+
 #melvin-title {
     font-size: 63.3px;
 }
 
 #title-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    margin: auto;
     padding: 20px;
-    max-width: 700px;
     animation: fall-intro 2s;
 }
 
@@ -91,7 +91,6 @@ a {
 }
 
 #content-container {
-    display: flex;
     position: relative;
     transition-duration: 1s;
 }
