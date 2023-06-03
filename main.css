@@ -37,6 +37,8 @@ a {
 #title-container {
     display: flex;
     position: relative;
+    justify-content: center;
+    width: 400px;
     padding: 20px;
     animation: fall-intro 2s;
 }
