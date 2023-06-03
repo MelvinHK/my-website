@@ -37,18 +37,13 @@ a {
     margin: auto;
     padding: 20px;
     max-width: 700px;
-    animation-name: intro;
-    animation-duration: 2s;
+    animation: fall-intro 2s;
 }
 
-@keyframes intro {
-    from {
+@keyframes fall-intro {
+    0% {
         filter: opacity(0);
         transform: translateY(-50%);
-    }
-    to {
-        filter: opacity(1);
-        transform: translateY(0%);
     }
 }
 
@@ -64,5 +59,18 @@ a {
 }
 
 #menu-list li:hover {
-    font-size: 25px;
+    font-size: 1.5em;
+}
+
+#menu-list a {
+    animation: list-intro 1s;
+}
+
+#menu-list a:nth-child(2) { animation-delay: 0.1s;}
+#menu-list a:nth-child(3) { animation-delay: 0.2s;}
+
+@keyframes list-intro {
+    0% {
+        transform: translateX(+50%);
+    }
 }
