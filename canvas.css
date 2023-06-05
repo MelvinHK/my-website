@@ -1,6 +1,7 @@
 #meku-link,
 #walk-path,
-#tree {
+#tree,
+#spacer {
     /* border: 1px solid black; */
     position: absolute;
     left: 50%;
@@ -15,6 +16,14 @@
 #meku-link {
     width: 40px;
     height: 90px;
+}
+
+#spacer {
+    transform: translateX(-50%);
+    background: linear-gradient(to top, rgb(255, 255, 255), 90%, rgba(255, 255, 255, 0));
+    width: 500px;
+    height: 200px;
+    bottom: 0;
 }
 
 #tree {

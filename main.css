@@ -27,6 +27,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transform-origin: top;
     transition-duration: 1s;
 }
 
@@ -93,17 +94,20 @@ a {
 }
 
 #content-container {
-    margin: 130px 20px 0 20px;
-    position: absolute;
+    margin-top: 90px;
+    position: fixed;
+    top: 47%;
     left: 50%;
     transform: translateX(-50%);
-    width: 700px;
-    height: 475px;
+    width: 500px;
+    height: 500px;
+    transition-duration: 1s;
 }
 
 #digital-art,
 #programming,
 #about {
+    text-align: justify;
     position: absolute;
     opacity: 0;
     transition-duration: 1s;
