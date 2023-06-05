@@ -1,7 +1,6 @@
-html {
+html, body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #7e80a2;
-    overflow-x: hidden;
 }
 
 h1,
@@ -95,21 +94,14 @@ a {
 
 #content-container {
     margin-top: 105px;
-    position: fixed;
+    position: absolute;
     top: 47%;
     left: 50%;
     transform: translateX(-50%);
     width: 460px;
-    height: 70%;
+    height: 100%;
     transition-duration: 1s;
-    overflow-y: hidden;
     scrollbar-gutter: stable;
-    padding-right: 10px;
-    margin-left: 10px;
-}
-
-#content-container:hover {
-    overflow-y: auto;
 }
 
 #digital-art,
@@ -120,23 +112,5 @@ a {
     position: absolute;
     opacity: 0;
     transition-duration: 1s;
-    padding-bottom: 20%;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-track {
-    background: none;
-}
-
-::-webkit-scrollbar-thumb {
-    width: 10px;
-    background: rgb(211, 211, 211);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(186, 186, 186);
+    padding-bottom: 200px;
 }
