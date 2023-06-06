@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #7e80a2;
 }
@@ -99,7 +100,6 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 460px;
-    height: 100%;
     transition-duration: 1s;
     scrollbar-gutter: stable;
 }
@@ -107,10 +107,12 @@ a {
 #digital-art,
 #programming,
 #about {
-    margin-top: 0;
-    text-align: justify;
     position: absolute;
+    text-align: justify;
+    visibility: hidden;
     opacity: 0;
-    transition-duration: 1s;
     padding-bottom: 200px;
+    margin-top: 0;
+    scroll-margin: 105px;
+    transition-duration: 1s;
 }

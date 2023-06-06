@@ -1,29 +1,32 @@
+html {
+    scrollbar-gutter: stable both-edges;
+}
+
 #meku-link,
 #walk-path,
 #tree,
 #spacer {
     /* border: 1px solid black; */
     position: fixed;
-    left: 50%;
+    left: 50vw;
 }
 
 #meku-link,
 #walk-path {
     transform: translateX(-50%);
-    bottom: 50px;
+    bottom: 0;
+}
+
+#walk-path {
+    padding-bottom: 50px;
+    background: linear-gradient(to top, rgb(255, 255, 255), 90%, rgba(255, 255, 255, 0));
+    padding-top: 70px;
 }
 
 #meku-link {
     width: 40px;
     height: 90px;
-}
-
-#spacer {
-    transform: translateX(-50%);
-    background: linear-gradient(to top, rgb(255, 255, 255), 90%, rgba(255, 255, 255, 0));
-    width: 500px;
-    height: 200px;
-    bottom: 0;
+    margin-bottom: 50px;
 }
 
 #tree {
