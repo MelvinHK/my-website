@@ -15,7 +15,7 @@ function checkHash() {
     about.style.visibility = "hidden";
 
     if (location.hash === '#digital_art' || location.hash === '#programming' || location.hash === '#about') {
-        window.scrollTo(0, 0);
+        scrollTo(0, 0);
         titleWrapper.style.top = "0%";
         titleWrapper.style.left = "50%";
         titleWrapper.style.transform = "translate(-50%, -0%)";
