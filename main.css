@@ -2,6 +2,7 @@ html,
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #7e80a2;
+    scrollbar-gutter: stable;
 }
 
 h1,
@@ -115,4 +116,21 @@ a {
     margin-top: 0;
     scroll-margin: 105px;
     transition-duration: 1s;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #77789671;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #77789689;
 }
