@@ -30,6 +30,7 @@ a {
     transform: translate(-50%, -50%);
     transform-origin: top;
     transition-duration: 1s;
+    z-index: 1;
 }
 
 #melvin-title {
@@ -133,4 +134,14 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #77789689;
+}
+
+@media only screen and (max-width: 600px) {
+    #title-container {
+        width: 370px;
+    }
+
+    #content-container {
+        width: 380px;
+    }
 }
