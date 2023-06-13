@@ -24,7 +24,7 @@
     background: linear-gradient(to top, rgb(255, 255, 255), 90%, rgba(255, 255, 255, 0));
 }
 
-#meku-link {    
+#meku-link {
     width: 40px;
     height: 90px;
     margin-bottom: 50px;
@@ -37,4 +37,13 @@
     bottom: 0px;
     width: 800px;
     height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    #walk-path {
+        padding-bottom: 30px;
+    }
+    #meku-link {
+        margin-bottom: 30px;
+    }
 }

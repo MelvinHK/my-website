@@ -88,7 +88,7 @@ a {
 }
 
 #content-container {
-    margin-top: 105px;
+    margin-top: 115px;
     position: absolute;
     top: 0%;
     left: 50%;
@@ -102,7 +102,6 @@ a {
 #programming,
 #about {
     position: absolute;
-    text-align: justify;
     visibility: hidden;
     opacity: 0;
     padding-bottom: 200px;
