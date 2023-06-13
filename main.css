@@ -13,11 +13,6 @@ h4 {
     margin: 0;
 }
 
-li {
-    font-size: 20px;
-    list-style-type: none;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -68,17 +63,14 @@ a {
     gap: 19px;
 }
 
-#menu-list li {
-    transition-duration: 0.5s;
-}
-
-#menu-list li:hover {
-    transform-origin: left;
-    transform: scale(1.15);
-}
-
 #menu-list a {
+    font-size: 20px;
+    transition-duration: 0.5s;
     animation: list-intro 1s;
+}
+
+#menu-list a:hover {
+    font-size: 1.5em;
 }
 
 #menu-list a:nth-child(2) {
@@ -117,6 +109,23 @@ a {
     margin-top: 0;
     scroll-margin: 460px;
     transition-duration: 1s;
+}
+
+.title-top {
+    top: 0% !important;
+    left: 50% !important;
+    transform: translate(-50%, -0%) scale(0.75) !important;
+}
+
+.page-show {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.page-hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 ::-webkit-scrollbar {

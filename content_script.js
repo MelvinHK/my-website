@@ -1,60 +1,39 @@
-const digitalArt = document.getElementById('digital-art');
-const programming = document.getElementById('programming');
-const about = document.getElementById('about');
-const titleWrapper = document.getElementById('title-wrapper');
-const contentContainer = document.getElementById('content-container');
 const html = document.documentElement;
 
+const titleWrapper = document.getElementById('title-wrapper');
+const titleContainer = document.getElementById('title-container');
+
+const contentContainer = document.getElementById('content-container');
+
+const pages = {
+    '#digital_art': document.getElementById('digital-art'),
+    '#programming': document.getElementById('programming'),
+    '#about': document.getElementById('about')
+};
+
 function checkHash() {
-    digitalArt.style.opacity = "0";
-    programming.style.opacity = "0";
-    about.style.opacity = "0";
+    for (const page in pages) {
+        pages[page].classList.remove('page-show');
+        pages[page].classList.add('page-hidden');
+    }
 
-    digitalArt.style.visibility = "hidden";
-    programming.style.visibility = "hidden";
-    about.style.visibility = "hidden";
-
-    if (location.hash === '#digital_art' || location.hash === '#programming' || location.hash === '#about') {
-        titleWrapper.style.top = "0%";
-        titleWrapper.style.left = "50%";
-        titleWrapper.style.transform = "translate(-50%, -0%)";
-        titleWrapper.style.transform += "scale(0.75)";
+    if (Object.keys(pages).includes(location.hash)) {
+        titleWrapper.classList.add('title-top');
         contentContainer.style.top = "0%";
         html.style.overflowY = "auto";
 
-        switch (location.hash) {
-            case '#digital_art':
-                digitalArt.style.visibility = "visible";
-                digitalArt.style.opacity = "1";
-                digitalArt.style.display = "initial";
-                programming.style.display = "none";
-                about.style.display = "none";
-                break;
-            case '#programming':
-                programming.style.visibility = "visible";
-                programming.style.opacity = "1";
-                programming.style.display = "initial";
-                digitalArt.style.display = "none";
-                about.style.display = "none";
-                break;
-            case '#about':
-                about.style.visibility = "visible";
-                about.style.opacity = "1";
-                about.style.display = "initial";
-                digitalArt.style.display = "none";
-                programming.style.display = "none";
-                break;
-        }
-    } else if (location.hash === "") {
-        titleWrapper.style.top = "50%";
-        titleWrapper.style.left = "50%";
-        titleWrapper.style.transform = "translate(-50%, -50%)";
+        pages[location.hash].classList.add('page-show');
+
+        for (const page in pages)
+            if (page != location.hash)
+                pages[page].style.display = "none";
+    } else {
+        titleWrapper.classList.remove('title-top');
         contentContainer.style.top = "47%";
         html.style.overflowY = "hidden";
 
-        digitalArt.style.display = "initial";
-        programming.style.display = "initial";
-        about.style.display = "initial";
+        for (const page in pages)
+            pages[page].style.display = 'initial';
     }
 }
 
