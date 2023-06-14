@@ -39,14 +39,14 @@ function draw() {
         if (gameFrame % frameRate == 0)
             spriteFrameX = spriteFrameX < 5 ? spriteFrameX + 1 : 0;
 
-        if (xPos < leftOffset - shadowWidth + mekuWidth)
+        if (xPos < shadowWidth - mekuWidth)
             direction = 1;
         if (xPos > canvas.width - leftOffset - mekuWidth)
             direction = -1;
         xPos += direction;
     }
 
-    mekuLink.style.setProperty('left', `calc(50% + ${xPos - 185}px)`);
+    mekuLink.style.setProperty('left', `${xPos + leftOffset}px`);
 
     gameFrame++;
 

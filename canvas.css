@@ -1,5 +1,5 @@
+#canvas-wrapper,
 #meku-link,
-#walk-path,
 #tree,
 #gradient {
     /* border: 1px solid black; */
@@ -7,14 +7,13 @@
     left: 50vw;
 }
 
-#meku-link,
-#walk-path,
+#canvas-wrapper,
 #gradient {
     transform: translateX(-50%);
     bottom: 0;
 }
 
-#walk-path {
+#canvas-wrapper {
     padding-bottom: 50px;
 }
 
@@ -40,9 +39,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #walk-path {
+    #canvas-wrapper {
         padding-bottom: 30px;
     }
+
     #meku-link {
         margin-bottom: 30px;
     }
