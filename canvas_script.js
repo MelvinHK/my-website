@@ -12,12 +12,12 @@ const shadowWidth = 104;
 const shadowHeight = 13;
 
 let spriteFrameX = 0;
-let spriteFrameY = 0;
+let spriteFrameY = 0; // 0 = walk left, 1 = walk right, 2 = idle
 let gameFrame = 0;
 let frameRate = 24;
 
 let xPos = 0;
-let direction = 1; // 0 = idle, 1 = left, -1 = right
+let direction = 1; // 0 = idle, 1 = right, -1 = left
 const leftOffset = 70; // offset meku to account for their shadow
 
 const mekuLink = document.getElementById("meku-link");
