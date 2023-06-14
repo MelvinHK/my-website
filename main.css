@@ -122,11 +122,6 @@ a {
     opacity: 1 !important;
 }
 
-.page-hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }

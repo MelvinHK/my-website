@@ -13,24 +13,22 @@ const pages = { // Keys must match corresponding href in index.html
 };
 
 function checkHash() {
-    for (const page in pages) {
-        pages[page].classList.remove('page-show');
-        pages[page].classList.add('page-hidden');
-    }
+    for (const page in pages)
+        pages[page].classList.remove('page-show'); // Remove page-show if it was added from previous call; pages are hidden by default.
 
     if (Object.keys(pages).includes(location.hash)) {
-        titleWrapper.classList.add('title-top');
+        titleWrapper.classList.add('title-top'); // Animate title to top of page
         contentContainer.style.top = "0%";
         html.style.overflowY = "auto";
 
-        pages[location.hash].classList.add('page-show');
+        pages[location.hash].classList.add('page-show'); // Make matching page visible
 
         for (const page in pages)
             if (page != location.hash)
-                pages[page].style.display = "none";
+                pages[page].style.display = "none"; // Make other pages display = none, otherwise longer pages will cause overflow...
     } else {
         titleWrapper.style.transitionDuration = '1s';
-        titleWrapper.classList.remove('title-top');
+        titleWrapper.classList.remove('title-top'); // Animate title center page
         contentContainer.style.top = "47%";
         html.style.overflowY = "hidden";
 
@@ -40,8 +38,8 @@ function checkHash() {
 }
 
 function cancelAnimation() {
-    titleContainer.style.animation = 'none';
     titleWrapper.style.transitionDuration = '0s';
+    titleContainer.style.animation = 'none';
 
     for (let i = 0; i < menuList.children.length; i++)
         menuList.children[i].style.animation = 'none';

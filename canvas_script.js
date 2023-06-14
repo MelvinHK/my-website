@@ -6,19 +6,20 @@ mekuSprite.src = "./images/mekuSpriteSheet.png";
 const mekuWidth = 40;
 const mekuHeight = 82;
 
-const shadow = new Image();
-shadow.src = './images/mekuWalkShadow.png';
+const shadowSprite = new Image();
+shadowSprite.src = './images/mekuWalkShadow.png';
 const shadowWidth = 104;
 const shadowHeight = 13;
 
 let spriteFrameX = 0;
 let spriteFrameY = 0; // 0 = walk left, 1 = walk right, 2 = idle
+
 let gameFrame = 0;
 let frameRate = 24;
 
-let xPos = 0;
+let xPos = 0; // 
 let direction = 1; // 0 = idle, 1 = right, -1 = left
-const leftOffset = 70; // offset meku to account for their shadow
+const leftOffset = 70; // Offset meku to account for their shadow
 
 const mekuLink = document.getElementById("meku-link");
 
@@ -29,10 +30,10 @@ function draw() {
 
     ctx.drawImage(
         mekuSprite,
-        spriteFrameX * mekuWidth, spriteFrameY * mekuHeight, mekuWidth, mekuHeight, // sprite sheet cropping
-        xPos + leftOffset, canvas.height - mekuHeight - 8, mekuWidth, mekuHeight // canvas position
+        spriteFrameX * mekuWidth, spriteFrameY * mekuHeight, mekuWidth, mekuHeight, // Sprite sheet cropping
+        xPos + leftOffset, canvas.height - mekuHeight - 8, mekuWidth, mekuHeight // Canvas position
     );
-    ctx.drawImage(shadow, 0, 0, shadowWidth, shadowHeight, xPos, canvas.height - shadowHeight, shadowWidth, shadowHeight);
+    ctx.drawImage(shadowSprite, 0, 0, shadowWidth, shadowHeight, xPos, canvas.height - shadowHeight, shadowWidth, shadowHeight);
 
     if (direction != 0) {
         if (gameFrame % frameRate == 0)
