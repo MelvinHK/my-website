@@ -1,6 +1,9 @@
 const canvas = document.getElementById("walk-path");
 const ctx = canvas.getContext('2d');
 
+const mekuSprite = new Image();
+mekuSprite.src = "./images/mekuSpriteSheet.png";
+
 const mekuWalkRight = new Image();
 mekuWalkRight.src = "./images/mekuWalkSpriteSheetFlipped.png";
 const mekuWalkLeft = new Image();
@@ -19,7 +22,8 @@ shadow.src = './images/mekuWalkShadow.png';
 const shadowWidth = 104;
 const shadowHeight = 13;
 
-let spriteFrame = 0;
+let spriteFrameX = 0;
+let spriteFrameY = 0;
 let gameFrame = 0;
 let frameRate = 24;
 
@@ -36,14 +40,14 @@ function draw() {
 
     ctx.drawImage(
         currentMeku,
-        direction == 0 ? 0 : spriteFrame * mekuWidth, 0, mekuWidth, mekuHeight, // sprite sheet cropping
+        direction == 0 ? 0 : spriteFrameX * mekuWidth, spriteFrameY * mekuHeight, mekuWidth, mekuHeight, // sprite sheet cropping
         xPos + leftOffset, canvas.height - mekuHeight - 8, mekuWidth, mekuHeight // canvas position
     );
     ctx.drawImage(shadow, 0, 0, shadowWidth, shadowHeight, xPos, canvas.height - shadowHeight, shadowWidth, shadowHeight);
 
     if (direction != 0) {
         if (gameFrame % frameRate == 0)
-            spriteFrame = spriteFrame < 5 ? spriteFrame + 1 : 0;
+            spriteFrameX = spriteFrameX < 5 ? spriteFrameX + 1 : 0;
 
         if (xPos < leftOffset - shadowWidth + mekuWidth)
             direction = 1;
