@@ -7,7 +7,7 @@ const mekuWidth = 40;
 const mekuHeight = 82;
 
 const shadowSprite = new Image();
-shadowSprite.src = './images/mekuWalkShadow.png';
+shadowSprite.src = './images/mekuShadow.png';
 const shadowWidth = 104;
 const shadowHeight = 13;
 
