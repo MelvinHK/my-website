@@ -31,7 +31,7 @@
 }
 
 #tree {
-    background-image: url("./images/treeBg2.png");
+    background-image: url("./images/treeBg.png");
     background-size: 800px 400px;
     transform: translateX(-75%);
     bottom: 0px;
