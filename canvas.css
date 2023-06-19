@@ -1,6 +1,7 @@
 #canvas-wrapper,
 #meku-link,
 #tree,
+#flower,
 #gradient {
     /* border: 1px solid black; */
     position: fixed;
@@ -8,6 +9,7 @@
 }
 
 #canvas-wrapper,
+#flower,
 #gradient {
     transform: translateX(-50%);
     bottom: 0;
@@ -39,6 +41,11 @@
     z-index: -1;
 }
 
+#flower {
+    display: none;
+    margin-bottom: 40px;
+}
+
 @media only screen and (max-width: 600px) {
     #canvas-wrapper {
         padding-bottom: 30px;
@@ -46,5 +53,9 @@
 
     #meku-link {
         margin-bottom: 30px;
+    }
+
+    #flower {
+        display: initial;
     }
 }
