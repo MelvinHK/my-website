@@ -53,6 +53,8 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
+draw();
+
 const baseInterval = 1550;
 let randomInterval = baseInterval;
 
@@ -68,5 +70,9 @@ function setRandomDirection() {
 
 setInterval(setRandomDirection, randomInterval);
 
-draw();
+function updateCanvasWidth() { canvas.width = media.matches ? 380 : 550; }
 
+const media = matchMedia("(max-width: 600px)");
+media.addEventListener("change", updateCanvasWidth);
+
+updateCanvasWidth();
