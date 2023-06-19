@@ -43,6 +43,7 @@ a {
     width: 400px;
     padding: 20px;
     animation: fall-intro 2s;
+    overflow-x: hidden;
 }
 
 #title-container h1 {
