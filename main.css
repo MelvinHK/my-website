@@ -130,10 +130,18 @@ a {
     transition-duration: 1s;
 }
 
-.art {
-    display: block;
+.thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 380px;
     margin: auto;
-    width: 380px;
+}
+
+.art {
+    padding: 5px;
+    width: 140px;
 }
 
 .title-top {
