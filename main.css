@@ -94,11 +94,13 @@ a {
         transform: translateX(+40%);
     }
 }
+
 @keyframes list-intro-2 {
     0% {
         transform: translateX(+60%);
     }
 }
+
 @keyframes list-intro-3 {
     0% {
         transform: translateX(+80%);
@@ -126,6 +128,12 @@ a {
     margin-top: 0;
     scroll-margin: 460px;
     transition-duration: 1s;
+}
+
+.art {
+    display: block;
+    margin: auto;
+    width: 380px;
 }
 
 .title-top {
