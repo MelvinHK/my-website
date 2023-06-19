@@ -43,16 +43,21 @@
 
 #flower {
     display: none;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
-@media only screen and (max-width: 600px) {
-    #canvas-wrapper {
-        padding-bottom: 30px;
+/* Mobile */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    #flower {
+        display: initial;
     }
+}
 
-    #meku-link {
-        margin-bottom: 30px;
+/* Tablet Portrait, Mobile Landscape */
+@media only screen and (max-width:999px) and (orientation: portrait),
+(max-width: 999px) and (orientation: landscape) {
+    #tree {
+        display: none;
     }
 
     #flower {
