@@ -34,6 +34,7 @@ a {
 
 #melvin-title {
     font-size: 63.3px;
+    color: rgb(247, 153, 110);
 }
 
 #title-container {
@@ -130,18 +131,26 @@ a {
     transition-duration: 1s;
 }
 
-.thumbnail {
+#grid {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    row-gap: 2ch;
     flex-wrap: wrap;
-    max-width: 380px;
-    margin: auto;
+    width: 100%;
 }
 
-.art {
-    padding: 5px;
-    width: 140px;
+.thumbnail {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 #7e80a236, 0 6px 20px 0 #7e80a261;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition-duration: 0.35s;
+}
+
+.thumbnail:hover {
+    scale: 1.1;
 }
 
 .title-top {
