@@ -164,7 +164,7 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     overflow: auto;
     justify-content: center;
-    align-items: flex-start
+    align-items: flex-start;
 }
 
 #thumbnail-enlarged {
