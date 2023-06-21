@@ -195,6 +195,20 @@ a {
     opacity: 1 !important;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-5 {
+    width: 1.5rem;
+}
+
+.h-5 {
+    height: 1.5rem;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
