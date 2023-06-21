@@ -136,6 +136,7 @@ a {
     grid-gap: 2ch;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 1.5em;
 }
 
 .thumbnail {
@@ -214,7 +215,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-    background: none;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
