@@ -56,7 +56,7 @@ window.onhashchange = checkHash;
 const artThumbnails = document.getElementsByClassName("thumbnail");
 const modal = document.getElementById("modal");
 const thumbnailEnlarged = document.getElementById("thumbnail-enlarged");
-const close = document.getElementById("close");
+const closeBtn = document.getElementById("close");
 
 function enlargeThumbnail() {
     modal.style.display = "flex";
@@ -66,6 +66,6 @@ function enlargeThumbnail() {
 for (var i = 0; i < artThumbnails.length; i++)
     artThumbnails[i].addEventListener('click', enlargeThumbnail, false);
 
-close.onclick = function () {
+closeBtn.onclick = function () {
     modal.style.display = "none";
 };
