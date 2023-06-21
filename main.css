@@ -131,9 +131,9 @@ a {
 }
 
 #grid {
-    display: flex;
-    justify-content: space-between;
-    row-gap: 2ch;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2ch;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -224,5 +224,9 @@ a {
     #thumbnail-enlarged {
         width: 80%;
         height: auto;
+    }
+
+    #grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
