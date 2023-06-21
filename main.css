@@ -245,3 +245,10 @@ a {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media only screen and (max-width:999px) and (orientation: portrait) {
+    #thumbnail-enlarged {
+        width: 80%;
+        height: auto;
+    }
+}

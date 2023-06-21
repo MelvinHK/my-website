@@ -66,6 +66,4 @@ function enlargeThumbnail() {
 for (var i = 0; i < artThumbnails.length; i++)
     artThumbnails[i].addEventListener('click', enlargeThumbnail, false);
 
-closeBtn.onclick = function () {
-    modal.style.display = "none";
-};
+closeBtn.onclick = () => { modal.style.display = "none"; };
