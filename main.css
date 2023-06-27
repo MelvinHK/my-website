@@ -17,6 +17,10 @@ h4 {
     margin: 0;
 }
 
+h3 {
+    margin-top: 16px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -41,7 +45,7 @@ a {
     display: flex;
     position: relative;
     justify-content: center;
-    width: 400px;
+    min-width: 400px;
     padding: 20px;
     animation: fall-intro 2s;
     overflow-x: hidden;
