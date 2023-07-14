@@ -7,6 +7,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #7e80a2;
     scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 
 h1,
