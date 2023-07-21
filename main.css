@@ -27,6 +27,11 @@ a {
     color: inherit;
 }
 
+.link {
+    text-decoration: underline;
+    color: rgb(118, 194, 241);
+}
+
 #title-wrapper {
     position: absolute;
     top: 50%;
@@ -213,23 +218,6 @@ a {
 
 .h-5 {
     height: 1.5rem;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #77789671;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #77789689;
 }
 
 @media only screen and (max-width: 600px) {
