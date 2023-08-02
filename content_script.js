@@ -22,6 +22,7 @@ function checkHash() {
         html.style.overflowY = "auto";
 
         pages[location.hash].classList.add('page-show'); // Make matching page visible
+        document.title = `${hashToDocumentTitle(location.hash)} - Melvin HK`;
 
         for (const page in pages)
             if (page != location.hash)
@@ -32,8 +33,21 @@ function checkHash() {
         contentContainer.style.top = "47%";
         html.style.overflowY = "hidden";
 
+        document.title = "Melvin HK"
+
         for (const page in pages)
             pages[page].style.display = 'initial';
+    }
+}
+
+function hashToDocumentTitle(hash) {
+    switch (hash) {
+        case "#digital_art":
+            return "Digital Art";
+        case "#programming":
+            return "Programming";
+        case "#about":
+            return "About";
     }
 }
 
