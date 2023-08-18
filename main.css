@@ -124,6 +124,7 @@ a {
     top: 0%;
     left: 50%;
     transform: translate(-50%);
+    transform-origin: center;
     transition-duration: 1s;
     width: 460px;
 }
@@ -226,7 +227,8 @@ a {
     }
 
     #content-container {
-        width: 380px;
+        max-width: 380px;
+        width: 90%;
     }
 
     #thumbnail-enlarged {
