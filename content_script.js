@@ -12,31 +12,37 @@ const pages = { // Keys must match corresponding href in index.html
     '#about': document.getElementById('about')
 };
 
+const artThumbnails = document.getElementsByClassName("thumbnail");
+const modal = document.getElementById("modal");
+const thumbnailEnlarged = document.getElementById("thumbnail-enlarged");
+const closeBtn = document.getElementById("close");
+
 function checkHash() {
-    for (const page in pages)
-        pages[page].classList.remove('page-show'); // Remove page-show if it was added from previous call; pages are hidden by default.
+    for (const page in pages) {
+        pages[page].classList.remove('page-show');
 
-    if (Object.keys(pages).includes(location.hash)) {
-        titleWrapper.classList.add('title-top'); // Animate title to top of page
-        contentContainer.style.top = "0%";
-        html.style.overflowY = "auto";
+        if (page !== location.hash) {
+            pages[page].style.display = "none";
+        }
+    }
 
-        pages[location.hash].classList.add('page-show'); // Make matching page visible
+    displayPage(Object.keys(pages).includes(location.hash));
+}
+
+function displayPage(isHashPage) {
+    titleWrapper.classList.toggle('title-top', isHashPage);
+    contentContainer.style.top = isHashPage ? '0%' : '47%';
+    html.style.overflowY = isHashPage ? 'auto' : 'hidden';
+
+    if (isHashPage) {
         document.title = `${hashToDocumentTitle(location.hash)} - Melvin HK`;
-
-        for (const page in pages)
-            if (page != location.hash)
-                pages[page].style.display = "none"; // Make other pages display = none, otherwise longer pages will cause overflow...
-    } else {
+        pages[location.hash].classList.add('page-show');
+    } else { // Default to title screen
         titleWrapper.style.transitionDuration = '1s';
-        titleWrapper.classList.remove('title-top'); // Animate title center page
-        contentContainer.style.top = "47%";
-        html.style.overflowY = "hidden";
-
-        document.title = "Melvin HK"
-
-        for (const page in pages)
-            pages[page].style.display = 'initial';
+        document.title = 'Melvin HK';
+        for (const page in pages) {
+            pages[page].style.display = "initial";
+        }
     }
 }
 
@@ -55,8 +61,7 @@ function cancelAnimation() {
     titleWrapper.style.transitionDuration = '0s';
     titleContainer.style.animation = 'none';
 
-    for (let i = 0; i < menuList.children.length; i++)
-        menuList.children[i].style.animation = 'none';
+    Array.from(menuList.children).forEach(child => child.style.animation = 'none');
 }
 
 // Cancel title intro animations if user refreshes/deep links hash page
@@ -67,17 +72,11 @@ if (Object.keys(pages).includes(location.hash)) {
 checkHash();
 window.onhashchange = checkHash;
 
-const artThumbnails = document.getElementsByClassName("thumbnail");
-const modal = document.getElementById("modal");
-const thumbnailEnlarged = document.getElementById("thumbnail-enlarged");
-const closeBtn = document.getElementById("close");
-
 function enlargeThumbnail() {
     modal.style.display = "flex";
     thumbnailEnlarged.src = this.src;
 }
 
-for (var i = 0; i < artThumbnails.length; i++)
-    artThumbnails[i].addEventListener('click', enlargeThumbnail, false);
+Array.from(artThumbnails).forEach(thumbnail => thumbnail.addEventListener('click', enlargeThumbnail));
 
 closeBtn.onclick = () => { modal.style.display = "none"; };
