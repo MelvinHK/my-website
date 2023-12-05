@@ -22,7 +22,9 @@ h3 {
     margin-top: 16px;
 }
 
-p, li, a {
+p,
+li,
+a {
     font-family: Arial, Helvetica, sans-serif;
 }
 
