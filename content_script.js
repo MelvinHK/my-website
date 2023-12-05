@@ -6,7 +6,7 @@ const menuList = document.getElementById('menu-list');
 
 const contentContainer = document.getElementById('content-container');
 
-const pages = { // Keys must match corresponding href in index.html
+const pages = { // Keys must match corresponding href in "menu-list" in index.html
     '#digital_art': document.getElementById('digital-art'),
     '#programming': document.getElementById('programming'),
     '#about': document.getElementById('about')
