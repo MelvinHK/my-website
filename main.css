@@ -57,6 +57,7 @@ a {
     justify-content: center;
     animation: fall-intro 2s;
     padding: 20px 0 20px 0;
+    text-wrap: nowrap;
 }
 
 #title-container h1 {
